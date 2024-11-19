@@ -29,3 +29,10 @@ What is the asymptotic runtime ($\Theta$) of your algorithm in terms of the
 number of comparisons? What is it in terms of the number of flips? Add your
 answer to this markdown file.
 
+Asymptotic runtime comparisons: $\Theta(n^2)$
+
+Inside a for loop, for every item in the list it makes a comparison, so it runs for n.
+
+Asymptotic runtime flips: $\Theta(2n)$
+
+Each time we flip the array to put the largest number on top, and repeat again to place it where it needs to be in every iteration of the for loop.
