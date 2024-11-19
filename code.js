@@ -1,5 +1,5 @@
 function flip(array, n) {
-    for (i = 0; i < Math.floor(n / 2); i++) {
+    for (i = 0; i < Math.floor(n/2); i++) {
         [array[i], array[n - (i + 1)]] = [array[n - (i + 1)], array[i]];
     }
     return array;
@@ -9,20 +9,20 @@ function flip(array, n) {
 function pancakeSort(array) {
     let max = 0;
 
-    for (i = 0; i < array.length; i++) {
-        max = largest(array, array.length - i);
+    for (j = 0; j < array.length; j++) {
+        max = largest(array, array.length - j);
         flip(array, max + 1);
-        flip(array, array.length - i);
+        flip(array, array.length - j);
     }
     return array;
 }
 
-function largest(array, n) {
+function largest(array, l) {
     let max = 0;
 
-    for (i = 0; i < n; i++) {
-        if(array[i] > array[max]) {
-            max = i;
+    for (m = 0; m < l; m++) {
+        if(array[m] > array[max]) {
+            max = m;
         }
     }
     return max;
